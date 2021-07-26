@@ -6,8 +6,8 @@
 
 
 # 编辑器页面:
-![Image text](https://github.com/corle-bell/BmLerp/blob/main/ScreenShoot/editor.png)
+![Image text](https://github.com/corle-bell/EnumEditor/blob/main/ScreenShoot/editor.png)
 
 # inspector展示:
-![Image text](https://github.com/corle-bell/BmLerp/blob/main/ScreenShoot/inpecstor.png)
+![Image text](https://github.com/corle-bell/EnumEditor/blob/main/ScreenShoot/inpecstor.png)
 
