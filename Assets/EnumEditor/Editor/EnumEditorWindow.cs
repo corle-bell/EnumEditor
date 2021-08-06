@@ -36,7 +36,7 @@ namespace Bm
 
         private void OnDisable()
         {
-
+            EditorApplication.update -= Update;
         }
 
         Vector2 scroll;
@@ -114,6 +114,14 @@ namespace Bm
         #endregion
 
         #region private fun
+        private void Update()
+        {
+            if (!EditorApplication.isCompiling)
+            {
+                EditorUtility.ClearProgressBar();
+                EditorApplication.update -= Update;
+            }
+        }
         public void Create()
         {
             
@@ -125,7 +133,10 @@ namespace Bm
         }
         public void SaveEnumFile()
         {
-            if(CurrentEnumName.Length==0)
+            EditorApplication.update += Update;
+            EditorUtility.DisplayCancelableProgressBar("提示", "正在编译~", 0.9f);
+
+            if (CurrentEnumName.Length==0)
             {
                 Log("名字为空");
                 return;
